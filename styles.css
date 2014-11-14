@@ -1,0 +1,52 @@
+html {
+  height: 100%;
+}
+
+body {
+  color: #FFF;
+  font-size: 5em;
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: background-color .4s linear;
+}
+
+main {
+  height: 100%;
+}
+
+section {
+  height: 60%;
+  padding: 20% 0;
+
+}
+
+.bgct-red {
+  background: red;
+}
+
+.bgct-orange {
+  background: orange;
+}
+
+.bgct-yellow {
+  background: yellow;
+}
+
+.bgct-green {
+  background: green;
+}
+
+.bgct-blue {
+  background: blue;
+}
+
+.bgct-indigo {
+  background: indigo;
+}
+
+.bgct-violet {
+  background: violet;
+}

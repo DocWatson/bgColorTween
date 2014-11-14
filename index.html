@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scroll It</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bgct-red">
+<header class="site-header">
+  Scroll the Rainbow!
+</header>
+<main>
+  <section id="red">
+      <h1>Red</h1>
+  </section>
+
+  <section id="orange">
+      <h1>Orange</h1>
+  </section>
+
+  <section id="yellow">
+      <h1>Yellow</h1>
+  </section>
+
+  <section id="green">
+      <h1>Green</h1>
+  </section>
+
+  <section id="blue">
+      <h1>Blue</h1>
+  </section>
+
+  <section id="indigo">
+      <h1>Indigo</h1>
+  </section>
+
+  <section id="violet">
+      <h1>Violet</h1>
+  </section>
+</main>
+<footer class="site-footer">
+</footer>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="bgColorTween.js"></script>
+<script>
+  $(function(){
+    bgColorTween.init();
+
+    $(window).scroll(function(){
+      bgColorTween.updateContainerClass();
+    });
+  });
+</script>
+</body>
+</html>
