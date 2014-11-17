@@ -17,19 +17,17 @@ A complete demo is included in this repository. Simply open the `index.html` fil
 
 Usage
 ============
-Somewhere in your application, call `bgColorTween.init()` and then add a scroll event to the `window`. Use the `bgColorTween.updateContainerClass();` method to apply a prefixed class to the container element. A complete example would look like:
+Somewhere in your application, call `bgColorTween.init()`:
 
 ```
 <script>
   $(function(){
     bgColorTween.init();
-
-    $(window).scroll(function(){
-      bgColorTween.updateContainerClass();
-    });
   });
 </script>
 ```
+
+This function will loop through your specified sections, gather their IDs (used for adding classes to the specified container), and then sets up a `window.scroll` event to update the class based on whether the section is in view or not.
 
 ### Defaults
 By default, this class assumes the container to update is the `<body>` element. It also assumes the elements we are waiting to be in view are `<section>` elements. When a `<section>` comes in view, the bgColorTween will update the CSS class on the body element. It will remove any classes it has added and then add the appropriate class to the container. To prevent collisions with other classes, bgColorTween uses a prefix `bgct-`.

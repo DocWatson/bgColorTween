@@ -31,6 +31,8 @@ var bgColorTween = {
         this[key] = options[key];
       }
     }
+    
+    this.setupScroll();
   },
   /**
    * isInView
@@ -47,6 +49,17 @@ var bgColorTween = {
     var elemBottom = elemTop + $(elem).height();
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  },
+  /**
+   * setupScroll
+   * function that adds an event listener to window.scroll
+   *
+   * @return void
+   */
+  setupScroll: function() {
+    $(window).scroll(function(){
+      bgColorTween.updateContainerClass();
+    });
   },
   /**
    * setupSections
